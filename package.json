@@ -1,20 +1,18 @@
 {
-  "name": "discord-commits-github",
+  "name": "discord-commit",
   "version": "1.0.0",
   "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MangoRP-Official/Discord-Commit.git"
   },
-  "keywords": [
-    "github",
-    "action",
-    "discord",
-    "webhook"
-  ],
-  "license": "GPL-3.0",
+  "author": "LucaNL",
+  "license": "ISC",
+  "homepage": "https://github.com/MangoRP-Official/Discord-Commit#readme",
+  "description": "",
   "dependencies": {
-    "@actions/core": "^1.2.3",
-    "@actions/github": "^2.1.1",
-    "discord.js": "^13.6.0"
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "discord.js": "^14.18.0"
   }
 }

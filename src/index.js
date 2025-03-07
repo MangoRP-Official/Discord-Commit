@@ -3,44 +3,25 @@ const github = require("@actions/github");
 const webhook = require("../src/discord.js");
 
 async function run() {
-  const payload = github.context.payload;
-  const repository = payload.repository.name;
-  const commits = payload.commits;
-  const size = commits.length;
+  try {
+    const payload = github.context.payload;
+    const { repository, commits, sender, compare } = payload;
+    if (!commits || commits.length === 0)
+      return console.log("No commits, skipping...");
+    if (sender.type === "Bot") return console.log("Commit by bot, skipping...");
 
-  console.log(`Received payload.`);
-  console.log(`Received ${commits.length}/${size} commits...`);
-  console.log(`------------------------`);
-  console.log(`Full payload: ${JSON.stringify(payload)}`);
-  console.log(`------------------------`);
+    const id = core.getInput("id");
+    const token = core.getInput("token");
+    const pusher = commits[0].committer.name;
 
-  if (commits.length === 0) {
-    console.log(`No commits, skipping...`);
-    return;
+    console.log(
+      `Processing ${commits.length} commit(s) for ${repository.name}...`
+    );
+    await webhook.send(id, token, repository.name, compare, commits, pusher);
+    console.log("Webhook sent successfully!");
+  } catch (error) {
+    core.setFailed(error.message);
   }
-  if (payload.sender.type === "Bot") {
-    console.log(`Commit by bot, skipping...`);
-    return;
-  }
-
-  const id = core.getInput("id");
-  const token = core.getInput("token");
-
-  webhook
-    .send(
-      id,
-      token,
-      repository,
-      payload.compare,
-      commits,
-      size,
-      commits[0].committer.name
-    )
-    .catch((err) => core.setFailed(err.message));
 }
 
-try {
-  run();
-} catch (error) {
-  core.setFailed(error.message);
-}
+run();
