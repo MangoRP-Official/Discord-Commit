@@ -16,7 +16,7 @@ module.exports.send = async (id, token, commits, pusher) => {
       changelog,
       totalCommits
     );
-    console.log(commits[0].timestamp, pusher, changelog, totalCommits);
+
     await client.send({ username: "MangoRP", embeds: [embed] });
   } catch (error) {
     console.error("Error sending webhook:", error.message);
@@ -27,6 +27,7 @@ module.exports.send = async (id, token, commits, pusher) => {
 };
 
 function createEmbed(timestamp, pusher, changelog, totalCommits) {
+  console.log(`https://github.com/${pusher}.png?size=64`);
   return new EmbedBuilder()
     .setColor("#FFA62B")
     .setAuthor({
