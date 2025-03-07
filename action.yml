@@ -11,5 +11,5 @@ inputs:
     description: The Discord Webhook Token
     required: true
 runs:
-  using: "node23"
+  using: "node20"
   main: "src/index.js"

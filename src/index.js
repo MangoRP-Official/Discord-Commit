@@ -17,7 +17,7 @@ async function run() {
     console.log(
       `Processing ${commits.length} commit(s) for ${repository.name}...`
     );
-    await webhook.send(id, token, repository.name, compare, commits, pusher);
+    await webhook.send(id, token, commits, pusher);
     console.log("Webhook sent successfully!");
   } catch (error) {
     core.setFailed(error.message);
