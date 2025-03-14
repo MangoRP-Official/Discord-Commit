@@ -1,1 +1,58 @@
-const _0x162f22=_0x2f48;(function(_0x51575a,_0x3ec836){const _0x3a90f5=_0x2f48,_0x132002=_0x51575a();while(!![]){try{const _0x25065e=-parseInt(_0x3a90f5(0xee))/0x1+-parseInt(_0x3a90f5(0xd2))/0x2*(-parseInt(_0x3a90f5(0xc8))/0x3)+parseInt(_0x3a90f5(0xe8))/0x4+parseInt(_0x3a90f5(0xda))/0x5*(parseInt(_0x3a90f5(0xcb))/0x6)+-parseInt(_0x3a90f5(0xec))/0x7*(-parseInt(_0x3a90f5(0xea))/0x8)+-parseInt(_0x3a90f5(0xdf))/0x9*(parseInt(_0x3a90f5(0xf0))/0xa)+parseInt(_0x3a90f5(0xd8))/0xb*(-parseInt(_0x3a90f5(0xd1))/0xc);if(_0x25065e===_0x3ec836)break;else _0x132002['push'](_0x132002['shift']());}catch(_0x409892){_0x132002['push'](_0x132002['shift']());}}}(_0x1933,0x486d7));function _0x1933(){const _0x401d62=['setTitle','length','5061876ZzQJGB','6aBelHN','.png?size=64','join','filter','MangoRP\x20Changelog','slice','11voTNRM','\x20meer...','570OHWYpI','exports','timestamp','parse','setThumbnail','106065kadSKq','setAuthor','send','#FFA62B','\x0a+\x20','setFooter','\x20update','https://images.mangorp.nl/global/logo.png','MangoRP\x20Changelogs','593592EoBSoU','setTimestamp','64TZABwg','\x20heeft\x20','478331qudXCS','message','249661dttMGA','\x20toegevoegd','290jVkhKN','map','https://github.com/','176862mPVeyU','...','error','23052mbdrhk','MangoRP','Merge','substring'];_0x1933=function(){return _0x401d62;};return _0x1933();}const {MessageEmbed,WebhookClient}=require('discord.js'),MAX_MESSAGE_LENGTH=0x48;module[_0x162f22(0xdb)][_0x162f22(0xe1)]=async(_0x4fdb04,_0x2aa6f4,_0x363b6e,_0x1e86d3,_0x16c242,_0x3ac899)=>{const _0x44f7f9=_0x162f22;try{const _0x240147=new WebhookClient({'id':_0x4fdb04,'token':_0x2aa6f4}),_0x2d67dc=getChangeLog(_0x16c242);if(!_0x2d67dc)return console['log']('No\x20valid\x20commits');const _0x5a39e7=createEmbed(_0x1e86d3,_0x16c242,_0x3ac899,_0x2d67dc);await _0x240147[_0x44f7f9(0xe1)]({'username':_0x44f7f9(0xcc),'embeds':[_0x5a39e7]});}catch(_0x3c7651){console[_0x44f7f9(0xca)]('Error\x20sending\x20webhook:',_0x3c7651[_0x44f7f9(0xed)]);throw new Error(_0x3c7651[_0x44f7f9(0xed)]);}};function _0x2f48(_0x1db5c8,_0x2e5e10){const _0x19330b=_0x1933();return _0x2f48=function(_0x2f4848,_0x46b9e8){_0x2f4848=_0x2f4848-0xc6;let _0x3f2da7=_0x19330b[_0x2f4848];return _0x3f2da7;},_0x2f48(_0x1db5c8,_0x2e5e10);}function createEmbed(_0x31ab3a,_0x29e4dc,_0xf12105,_0x48dff2){const _0x26caff=_0x162f22;return new MessageEmbed()['setColor'](_0x26caff(0xe2))[_0x26caff(0xe0)]({'name':_0xf12105+_0x26caff(0xeb)+_0x29e4dc['length']+_0x26caff(0xe5)+(_0x29e4dc[_0x26caff(0xd0)]===0x1?'':'s')+_0x26caff(0xef),'iconURL':_0x26caff(0xc7)+_0xf12105+_0x26caff(0xd3)})[_0x26caff(0xcf)](_0x26caff(0xd6))[_0x26caff(0xde)](_0x26caff(0xe6))['setDescription'](_0x48dff2)[_0x26caff(0xe4)]({'text':_0x26caff(0xe7),'iconURL':_0x26caff(0xe6)})[_0x26caff(0xe9)](Date[_0x26caff(0xdd)](_0x29e4dc[0x0][_0x26caff(0xdc)]));}function getChangeLog(_0x3d3927){const _0x2fed25=_0x162f22,_0x218b3a=_0x3d3927[_0x2fed25(0xd5)](_0x2def2a=>!_0x2def2a[_0x2fed25(0xed)]['includes'](_0x2fed25(0xcd))&&!_0x2def2a['message']['includes']('-hide'));if(_0x218b3a[_0x2fed25(0xd0)]===0x0)return;let _0x12d5e2=_0x218b3a[_0x2fed25(0xd7)](0x0,0xa)[_0x2fed25(0xc6)](_0x5afc84=>{const _0x3dc9d1=_0x2fed25,_0x1b4544=_0x5afc84[_0x3dc9d1(0xed)][_0x3dc9d1(0xd0)]>MAX_MESSAGE_LENGTH?_0x5afc84['message'][_0x3dc9d1(0xce)](0x0,MAX_MESSAGE_LENGTH)+_0x3dc9d1(0xc9):_0x5afc84[_0x3dc9d1(0xed)];return'—\x20'+_0x1b4544;})[_0x2fed25(0xd4)]('\x0a');if(_0x218b3a[_0x2fed25(0xd0)]>0xa)_0x12d5e2+=_0x2fed25(0xe3)+(_0x218b3a[_0x2fed25(0xd0)]-0xa)+_0x2fed25(0xd9);return _0x12d5e2;}
+const { MessageEmbed, WebhookClient } = require("discord.js");
+const MAX_MESSAGE_LENGTH = 72;
+
+module.exports.send = async (id, token, commits, pusher) => {
+  try {
+    const client = new WebhookClient({ id, token });
+    const changelog = getChangeLog(commits);
+    if (!changelog) return console.log("No valid commits");
+
+    const embed = createEmbed(commits, pusher, changelog);
+    await client.send({ username: "MangoRP", embeds: [embed] });
+  } catch (error) {
+    console.error("Error sending webhook:", error.message);
+    throw new Error(error.message);
+  }
+};
+
+function createEmbed(commits, pusher, changelog) {
+  return new MessageEmbed()
+    .setColor("#FFA62B")
+    .setAuthor({
+      name: `${pusher} heeft ${commits.length} update${
+        commits.length === 1 ? "" : "s"
+      } toegevoegd`,
+      iconURL: `https://github.com/${pusher}.png?size=64`,
+    })
+    .setTitle("MangoRP Changelog")
+    .setThumbnail("https://images.mangorp.nl/global/logo.png")
+    .setDescription(changelog)
+    .setFooter({
+      text: "MangoRP Changelogs",
+      iconURL: "https://images.mangorp.nl/global/logo.png",
+    })
+    .setTimestamp(Date.parse(commits[0].timestamp));
+}
+
+function getChangeLog(commits) {
+  const filteredCommits = commits.filter(
+    (commit) =>
+      !commit.message.includes("Merge") && !commit.message.includes("-hide")
+  );
+  if (filteredCommits.length === 0) return;
+
+  let changelog = filteredCommits
+    .slice(0, 10)
+    .map((commit) => {
+      const message =
+        commit.message.length > MAX_MESSAGE_LENGTH
+          ? commit.message.substring(0, MAX_MESSAGE_LENGTH) + "..."
+          : commit.message;
+      return `— ${message}`;
+    })
+    .join("\n");
+
+  if (filteredCommits.length > 10)
+    changelog += `\n+ ${filteredCommits.length - 10} meer...`;
+  return changelog;
+}
